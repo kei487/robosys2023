@@ -1,0 +1,8 @@
+#!/usr/bin/python3
+import sys
+
+num = 0.0
+for line in sys.stdin:
+	num += float(line)
+
+print(num)
