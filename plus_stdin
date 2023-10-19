@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-# SPDX-FileCopyrightText: 2023 Keitaro Nakamaura  
+# SPDX-FileCopyrightText: 2023 Keitaro Nakamaura
+# SPDX-License-Identifier: BSD-3-Clause
+
 import sys
 
 num = 0
