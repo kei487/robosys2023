@@ -7,10 +7,10 @@ $ git clone git@github.com:kei487/robosys202x.git
 ```
 
 # コードの説明
- # plus_stdin
+ # plus
   渡された数値を全て足し合わせて返却するプログラムです.
 ```
-$ seq 10 | ./plus_stdin 
+$ seq 10 | ./plus 
 55
 ```
 
