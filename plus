@@ -7,8 +7,10 @@ import sys
 num = 0
 for line in sys.stdin:
     try:
+        print('%s+' % line.strip(),end='')
         num += int(line)
     except:
+        print('%s+' % line.strip(),end='')
         num += float(line)
 
-print(num)
+print("\033[1D\033[K",'=',num)
