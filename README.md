@@ -1,5 +1,9 @@
 # plusコマンド
 ![test](https://github.com/kei487/robosys202x/actions/workflows/test.yml/badge.svg)
+
+* [イントロダクション](# イントロダクション)
+
+# イントロダクション
   標準入力から渡された数値を全て足し合わせて返却するプログラムです.
 
 # インストール方法
