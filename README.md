@@ -4,7 +4,7 @@
 
 # インストール方法
 ```
-$ git clone git@github.com:kei487/robosys202x.git
+$ git clone git@github.com:kei487/robosys2023.git
 ```
 
 # コードの実行方法
