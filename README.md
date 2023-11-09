@@ -1,5 +1,6 @@
-# robosys2023
-このリポジトリは千葉工業大学未来ロボティクス学科講義ロボットシステム学で作成したプログラムをまとめたものです。
+# plusコマンド
+![test](https://github.com/kei487/robosys202x/actions/workflows/test.yml/badge.svg)
+  標準入力から渡された数値を全て足し合わせて返却するプログラムです.
 
 # インストール方法
 ```
@@ -7,9 +8,6 @@ $ git clone git@github.com:kei487/robosys202x.git
 ```
 
 # コードの実行方法
-## plus
-![test](https://github.com/kei487/robosys202x/actions/workflows/test.yml/badge.svg)
-  渡された数値を全て足し合わせて返却するプログラムです.
 ```
 $ chmod +x plus
 $ seq 10 | ./plus 
