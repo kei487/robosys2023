@@ -16,6 +16,9 @@ out=$(seq 5 | ./plus)
 out=$(seq 10 | ./plus)
 [ "${out}" = "1+2+3+4+5+6+7+8+9+10 = 55" ] || ng ${LINENO}
 
+out=$(echo -e "1.0\n2.0\n3.0\n4.0" | ./plus)
+[ "${out}" = "1.0+2.0+3.0+4.0 = 10.0" ] || ng ${LINENO}
+
 ### STRANGE INPUT ###
 out=$(echo あ | ./plus)
 [ "$?" = 1 ] || ng ${LINEMO}
