@@ -4,13 +4,20 @@
 
 import sys
 
+i = 0
 num = 0
+sline=[]
 for line in sys.stdin:
     try:
-        print('%s+' % line.strip(),end='')
         num += int(line)
     except:
-        print('%s+' % line.strip(),end='')
         num += float(line)
+    sline = sline + [line]
+for line in sline:
+    if i == len(sline) -1:
+        print('%s ' % line.strip(),end='')
+    else:
+        print('%s+' % line.strip(),end='')
+    i+=1
 
-print("\033[1D\033[K",'=',num)
+print('=',num)
