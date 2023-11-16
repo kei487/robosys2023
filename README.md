@@ -1,5 +1,5 @@
 # plusコマンド
-![test](https://github.com/kei487/robosys202x/actions/workflows/test.yml/badge.svg)
+![test](https://github.com/kei487/robosys2023/actions/workflows/test.yml/badge.svg)
 
 *  [イントロダクション](#イントロダクション)
 *  [使い方](#使い方)
