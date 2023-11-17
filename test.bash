@@ -10,11 +10,32 @@ ng () {
 res=0
 
 ### 1/0 TEST ###
+out=$(seq 1 | ./plus)
+[ "${out}" = "1 = 1" ] || ng ${LINENO}
+
+out=$(seq 1.0 | ./plus)
+[ "${out}" = "1 = 1" ] || ng ${LINENO}
+
+out=$(seq 0 | ./plus)
+[ "${out}" = "= 0" ] || ng ${LINENO}
+
+out=$(echo 1.0 | ./plus)
+[ "${out}" = "1.0 = 1.0" ] || ng ${LINENO}
+
+out=$(echo 0.0 | ./plus)
+[ "${out}" = "0.0 = 0.0" ] || ng ${LINENO}
+
 out=$(seq 5 | ./plus)
 [ "${out}" = "1+2+3+4+5 = 15" ] || ng ${LINENO}
 
 out=$(seq 10 | ./plus)
 [ "${out}" = "1+2+3+4+5+6+7+8+9+10 = 55" ] || ng ${LINENO}
+
+out=$(seq 15 | ./plus)
+[ "${out}" = "1+2+3+4+5+6+7+8+9+10+11+12+13+14+15 = 120" ] || ng ${LINENO}
+
+out=$(seq 20 | ./plus)
+[ "${out}" = "1+2+3+4+5+6+7+8+9+10+11+12+13+14+15+16+17+18+19+20 = 210" ] || ng ${LINEMO}
 
 out=$(echo -e "1.0\n2.0\n3.0\n4.0" | ./plus)
 [ "${out}" = "1.0+2.0+3.0+4.0 = 10.0" ] || ng ${LINENO}
