@@ -7,17 +7,25 @@ import sys
 i = 0
 num = 0
 sline=[]
+#calculate
 for line in sys.stdin:
     try:
         num += int(line)
     except:
         num += float(line)
     sline = sline + [line]
+#output
 for line in sline:
-    if i == len(sline) -1:
-        print('%s ' % line.strip(),end='')
+    if float(line) < 0:
+        if i == len(sline) -1:
+            print('(%s) ' % line.strip(),end='')
+        else:
+            print('(%s)+' % line.strip(),end='')
     else:
-        print('%s+' % line.strip(),end='')
+        if i == len(sline) -1:
+            print('%s ' % line.strip(),end='')
+        else:
+            print('%s+' % line.strip(),end='')
     i+=1
 
 print('=',num)
