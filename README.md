@@ -18,11 +18,13 @@
 ## インストール方法
 ```
 $ git clone git@github.com:kei487/robosys2023.git
+$ cd robosys2033
+$ chmod +x plus
 ```
 
 ## コードの実行方法
+改行で区切られた
 ```
-$ chmod +x plus
 $ seq 10 | ./plus 
 1+2+3+4+5+6+7+8+9+10 = 55
 ```
