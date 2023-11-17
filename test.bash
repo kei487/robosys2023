@@ -28,6 +28,12 @@ out=$(echo 1.0 | ./plus)
 out=$(echo 0.0 | ./plus)
 [ "${out}" = "0.0 = 0.0" ] || ng ${LINENO}
 
+out=$(echo -1.0 | ./plus)
+[ "${out}" = "(-1.0) = -1.0" ] || ng ${LINENO}
+
+out=$(echo -1 | ./plus)
+[ "${out}" = "(-1) = -1" ] || ng ${LINENO}
+
 out=$(seq 5 | ./plus)
 [ "${out}" = "1+2+3+4+5 = 15" ] || ng ${LINENO}
 
@@ -52,6 +58,12 @@ out=$(echo -e "-1.0\n-2.0\n-3.0\n-4.0" | ./plus)
 out=$(echo -e "-1.0\n2.0\n3.0\n-4.0" | ./plus)
 [ "${out}" = "(-1.0)+2.0+3.0+(-4.0) = 0.0" ] || ng ${LINENO}
 
+out=$(echo -e "-1.0\n2.0\n3.0\n-4.0\n1.0\n-2.0\n-3.0\n4.0" | ./plus)
+[ "${out}" = "(-1.0)+2.0+3.0+(-4.0)+1.0+(-2.0)+(-3.0)+4.0 = 0.0" ] || ng ${LINENO}
+
+out=$(echo -e "-1.5\n2.5\n3.5\n-4.5" | ./plus)
+[ "${out}" = "(-1.5)+2.5+3.5+(-4.5) = 0.0" ] || ng ${LINENO}
+
 ### STRANGE INPUT ###
 out=$(echo あ | ./plus)
 [ "$?" = 1 ] || ng ${LINEMO}
@@ -72,6 +84,7 @@ out=$(echo -e "hoge\nhoge\nhoge\n" | ./plus)
 out=$(echo | ./plus)
 [ "$?" = 1 ] || ng ${LINEMO}
 [ "${out}" = "" ] || ng ${LINEMO}
+
 
 [ "$res" = 0 ] && echo OK
 exit $res
