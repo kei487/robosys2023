@@ -93,6 +93,10 @@ out=$(echo -e "hoge\nhoge\nhoge\n" | ./plus)
 [ "$?" = 1 ] || ng ${LINEMO}
 [ "${out}" = "" ] || ng ${LINEMO}
 
+out=$(echo 1 2| ./plus)
+[ "$?" = 1 ] || ng ${LINEMO}
+[ "${out}" = "" ] || ng ${LINEMO}
+
 out=$(echo | ./plus)
 [ "$?" = 1 ] || ng ${LINEMO}
 [ "${out}" = "" ] || ng ${LINEMO}
