@@ -19,6 +19,9 @@ out=$(seq 1.0 | ./plus)
 out=$(seq 0 | ./plus)
 [ "${out}" = "= 0" ] || ng ${LINENO}
 
+out=$(echo 999999999999 | ./plus)
+[ "${out}" = "999999999999 = 999999999999" ] || ng ${LINENO}
+
 out=$(echo 1.0 | ./plus)
 [ "${out}" = "1.0 = 1.0" ] || ng ${LINENO}
 
@@ -51,6 +54,18 @@ out=$(echo -e "-1.0\n2.0\n3.0\n-4.0" | ./plus)
 
 ### STRANGE INPUT ###
 out=$(echo あ | ./plus)
+[ "$?" = 1 ] || ng ${LINEMO}
+[ "${out}" = "" ] || ng ${LINEMO}
+
+out=$(echo a | ./plus)
+[ "$?" = 1 ] || ng ${LINEMO}
+[ "${out}" = "" ] || ng ${LINEMO}
+
+out=$(echo hoge | ./plus)
+[ "$?" = 1 ] || ng ${LINEMO}
+[ "${out}" = "" ] || ng ${LINEMO}
+
+out=$(echo -e "hoge\nhoge\nhoge\n" | ./plus)
 [ "$?" = 1 ] || ng ${LINEMO}
 [ "${out}" = "" ] || ng ${LINEMO}
 
