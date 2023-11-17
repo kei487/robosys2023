@@ -12,6 +12,7 @@
 
 # イントロダクション
   標準入力から渡された数値を全て足し合わせて返却するプログラムです.
+  求める数式も表示されます.
 
 # 使い方
 ## インストール方法
@@ -23,7 +24,7 @@ $ git clone git@github.com:kei487/robosys2023.git
 ```
 $ chmod +x plus
 $ seq 10 | ./plus 
-55
+1+2+3+4+5+6+7+8+9+10 = 55
 ```
 
 # 要求環境
@@ -38,4 +39,5 @@ $ seq 10 | ./plus
 * このソフトウェアパッケージは，3条項BSDライセンスの下，再頒布および使用が許可されます．
  * このパッケージのコードは，下記のスライド（CC-BY-SA 4.0 by Ryuichi Ueda）のものを，本人の許可を得て自身の著作としたものです．
       * [ryuichiueda/my_slides robosys_2022](https://github.com/ryuichiueda/my_slides/tree/master/robosys_2022)
-* © 2023 Keitaro Nakamura 
+ 
+ © 2023 Keitaro Nakamura 
