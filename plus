@@ -4,28 +4,41 @@
 
 import sys
 
-i = 0
-num = 0
 sline=[]
-#calculate
-for line in sys.stdin:
+num = 0
+j = 0
+
+#input
+if(len(sys.argv) == 1):
+    for line in sys.stdin:
+        sline = sline + [line]
+elif(sys.argv[1] == '-b'):
+    for i in range(2,len(sys.argv)):
+        sline = sline + [sys.argv[i]]
+elif(sys.argv[1] == '-help'):
+    print('これは標準に対してその和と計算式を返却するコマンドです.\nオプション\n-b：第3引数以降の総和と計算式を返却します.\n-help：ヘルプを表示します.')
+    sys.exit(0)
+else:
+    print('そのオプションは対応していません.\n詳しくは\n./plus -help\nを参照してください')
+    sys.exit(1)
+
+#calculate and output
+for line in sline:
     try:
         num += int(line)
     except:
         num += float(line)
-    sline = sline + [line]
-#output
-for line in sline:
+    
     if float(line) < 0:
-        if i == len(sline) -1:
+        if j == len(sline) -1:
             print('(%s) ' % line.strip(),end='')
         else:
             print('(%s)+' % line.strip(),end='')
     else:
-        if i == len(sline) -1:
+        if j == len(sline) -1:
             print('%s ' % line.strip(),end='')
         else:
             print('%s+' % line.strip(),end='')
-    i+=1
+    j+=1
 
-print('=',num)
+print("=",num)
