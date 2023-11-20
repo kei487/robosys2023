@@ -205,7 +205,7 @@ out=$(echo | ./plus)
 [ "${out}" = "" ] || ng ${LINEMO}
 
 
-### STRANGE INPUT STDIO###
+### STRANGE INPUT OPTION###
 
 out=$(./plus -b $(echo あ))
 [ "$?" = 1 ] || ng ${LINEMO}
@@ -222,6 +222,11 @@ out=$(./plus -b $(echo hoge))
 out=$(./plus -b $(echo -e "hoge\nhoge\nhoge\n"))
 [ "$?" = 1 ] || ng ${LINEMO}
 [ "${out}" = "" ] || ng ${LINEMO}
+
+
+### STRANGE OPTION ###
+out=$(./plus -wa)
+[ "$?" = 1 ] || ng ${LINEMO}
 
 
 
