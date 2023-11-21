@@ -22,7 +22,7 @@ $ cd robosys2033
 $ chmod +x plus
 ```
 
-## コードの実行方法
+## 実行方法
  改行で区切られた標準出力を受け取りその総和と計算式を返却します.
 * 実行例
 ```
@@ -52,7 +52,7 @@ $ ./plus -b 10 20 30 40 50
 
 # ライセンス
 * このソフトウェアパッケージは，3条項BSDライセンスの下，再頒布および使用が許可されます．
- * このパッケージのコードは，下記のスライド（CC-BY-SA 4.0 by Ryuichi Ueda）のものを，本人の許可を得て自身の著作としたものです．
+ * このパッケージのコードの一部は，下記のスライド（CC-BY-SA 4.0 by Ryuichi Ueda）のものを，本人の許可を得て自身の著作としたものです．
       * [ryuichiueda/my_slides robosys_2022](https://github.com/ryuichiueda/my_slides/tree/master/robosys_2022)
  
  © 2023 Keitaro Nakamura 
