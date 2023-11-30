@@ -53,6 +53,6 @@ $ ./plus -b 10 20 30 40 50
 # ライセンス
 * このソフトウェアパッケージは，3条項BSDライセンスの下，再頒布および使用が許可されます．
  * このパッケージのコードの一部は，下記のスライド（CC-BY-SA 4.0 by Ryuichi Ueda）のものを，本人の許可を得て自身の著作としたものです．
-      * [ryuichiueda/my_slides robosys_2022](https://github.com/ryuichiueda/my_slides/tree/master/robosys_2022)
+      * [ryuichiueda/robosys2023](https://github.com/ryuichiueda/robosys2023.git)
  
  © 2023 Keitaro Nakamura 
