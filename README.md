@@ -17,7 +17,7 @@
 # 使い方
 ## インストール方法
 ```
-$ git clone git@github.com:kei487/robosys2023.git
+$ git clone https://github.com/kei487/robosys2023.git
 $ cd robosys2033
 $ chmod +x plus
 ```
